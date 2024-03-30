@@ -17,22 +17,27 @@
 #define MAGIC 2
 
 // key positions
-#define LH_R1 0  1  2  3  4                                                  // F1 F2 F3 F4 F5
-#define LH_R2 10 11 12 13 14 15 // = 1 2 3 4 5
-#define LH_R3 22 23 24 25 26 27 // TAB Q W E R T
-#define LH_R4 34 35 36 37 38 39 // ESC A S D F G
-#define LH_R5 46 47 48 49 50 51   52 53 54 // ` Z X C V B LSHFT LCTRL LOWER
-#define LH_R6 64 65 66 67 68      69 70 71 // 
-#define RH_R1                                               5  6  7  8  9
-#define RH_R2                                           16 17 18 19 20 21
-#define RH_R3                                           28 29 30 31 32 33
-#define RH_R4                                           40 41 42 43 44 45
-#define RH_R5                                 55 56 57  58 59 60 61 62 63
-#define RH_R6                                 72 73 74 75  76 77 78 79 80
+#define LH_KEYS \
+0  1  2  3  4 \
+10 11 12 13 14 15 \
+22 23 24 25 26 27 \
+34 35 36 37 38 39 \
+46 47 48 49 50 51 \
+64 65 66 67 68  \
+#define RH_KEYS \
+5  6  7  8  9 \
+16 17 18 19 20 21 \
+28 29 30 31 32 33 \
+40 41 42 43 44 45 \
+58 59 60 61 62 63 \
+75  76 77 78 79 80 \
 
 #define LH_POS LH_R1 LH_R2 LH_R3 LH_R4 LH_R5 LH_R6
 #define RH_POS RH_R1 RH_R2 RH_R3 RH_R4 RH_R5 RH_R6
 #define HOME_MODS 35 36 37 38 41 42 43 44
+#define THUMB_KEYS \
+52 53 54       55 56 57 \
+69 70 71         72 73 74
 
 
 / {
@@ -49,21 +54,25 @@
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
 			flavor = "tap-preferred";
-			tapping-term-ms = <200>;// <---[[produces tap if held longer than tapping-term-ms]]
-			quick-tap-ms = <200>;
+			require-prior-idle-ms = <100>;
+			tapping-term-ms = <150>;// <---[[produces tap if held longer than tapping-term-ms]]
+			quick-tap-ms = <120>;
 			bindings = <&kp>, <&kp>;
-			hold-trigger-key-positions = <RH_POS HOME_MODS>;// <---[[right-hand keys]]
-            retro-tap;
+			hold-trigger-key-positions = <RH_KEYS THUMB_KEYS>;// <---[[right-hand keys]]
+            hold-trigger-on-release;
+			retro-tap;
 		};
 		rh_pht: right_positional_hold_tap {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
 			flavor = "tap-preferred";
-			tapping-term-ms = <200>;// <---[[produces tap if held longer than tapping-term-ms]]
-			quick-tap-ms = <200>;
+			require-prior-idle-ms = <100>;
+			tapping-term-ms = <150>;// <---[[produces tap if held longer than tapping-term-ms]]
+			quick-tap-ms = <120>;
 			bindings = <&kp>, <&kp>;
-			hold-trigger-key-positions = <LH_POS HOME_MODS>;// <---[[left-hand keys]]
-            retro-tap;
+			hold-trigger-key-positions = <LH_KEYS THUMB_KEYS>;// <---[[left-hand keys]]
+            hold-trigger-on-release;
+			retro-tap;
 		};
 	};
 	
@@ -146,6 +155,10 @@
 			&sys_reset        &none               &none           &none           &none           &none           &bt_2     &bt_3     &none            &none     &none     &none       &none      &none      &none      &none      &none      &sys_reset
 			&none             &none               &none           &none           &none                           &bt_0     &bt_1     &out OUT_USB     &none     &none     &none                  &none      &none      &none      &none      &none
 			>;
+		};
+		
+		test_layer {
+			
 		};
 	};
 };
