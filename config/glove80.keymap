@@ -16,6 +16,12 @@
 #define LOWER 1
 #define MAGIC 2
 
+
+&mt {
+    flavor = "tap-preferred";
+    retro-tap;
+};
+    
 / {
     behaviors {
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
