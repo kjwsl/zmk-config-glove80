@@ -29,9 +29,12 @@
 #define RH_R5 55 56 57 58 59 60 61 62 63
 #define LH_R6 64 65 66 67 68 69 70 71 72
 #define RH_R6 73 74 75 76 77 78 79 80 81
+#define LH_R1C1 0
+#define 
 
 #define LH_POS LH_R1 LH_R2 LH_R3 LH_R4 LH_R5 LH_R6
 #define RH_POS RH_R1 RH_R2 RH_R3 RH_R4 RH_R5 RH_R6
+#define HOME_MODS 
 
 
 / {
@@ -47,20 +50,20 @@
 		lh_pht: left_positional_hold_tap {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
-			flavor = "tap-unless-interrupted";
+			flavor = "tap-preferred";
 			tapping-term-ms = <100>;// <---[[produces tap if held longer than tapping-term-ms]]
 			quick-tap-ms = <200>;
 			bindings = <&kp>, <&kp>;
-			hold-trigger-key-positions = <RH_POS>;// <---[[right-hand keys]]
+			hold-trigger-key-positions = <RH_POS HOME_MODS>;// <---[[right-hand keys]]
 		};
 		rh_pht: right_positional_hold_tap {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
-			flavor = "tap-unless-interrupted";
+			flavor = "tap-preferred";
 			tapping-term-ms = <100>;// <---[[produces tap if held longer than tapping-term-ms]]
 			quick-tap-ms = <200>;
 			bindings = <&kp>, <&kp>;
-			hold-trigger-key-positions = <LH_POS>;// <---[[left-hand keys]]
+			hold-trigger-key-positions = <LH_POS HOME_MODS>;// <---[[left-hand keys]]
 		};
 	};
 	
