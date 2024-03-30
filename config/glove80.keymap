@@ -32,7 +32,7 @@
 28 29 30 31 32 33 \
 40 41 42 43 44 45 \
 58 59 60 61 62 63 \
-75  76 77 78 79 80
+75 76 77 78 79 80
 
 #define THUMB_KEYS \
 52 53 54       55 56 57 \
@@ -49,6 +49,7 @@
 			tapping-term-ms = <200>;
 			bindings = <&mo LOWER>, <&to LOWER>;
 		};
+        
 		lh_pht: left_positional_hold_tap {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
@@ -61,6 +62,7 @@
             hold-trigger-on-release;
 			retro-tap;
 		};
+
 		rh_pht: right_positional_hold_tap {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
