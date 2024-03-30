@@ -29,10 +29,6 @@
         
     };
 
-    &mt {
-        retro-tap;
-    };
-
     macros {
         bt_0: bt_profile_macro_0 {
             compatible = "zmk,behavior-macro";
