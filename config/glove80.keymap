@@ -53,6 +53,7 @@
 			quick-tap-ms = <200>;
 			bindings = <&kp>, <&kp>;
 			hold-trigger-key-positions = <RH_POS HOME_MODS>;// <---[[right-hand keys]]
+            retro-tap;
 		};
 		rh_pht: right_positional_hold_tap {
 			compatible = "zmk,behavior-hold-tap";
@@ -62,6 +63,7 @@
 			quick-tap-ms = <200>;
 			bindings = <&kp>, <&kp>;
 			hold-trigger-key-positions = <LH_POS HOME_MODS>;// <---[[left-hand keys]]
+            retro-tap;
 		};
 	};
 	
