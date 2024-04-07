@@ -56,7 +56,7 @@
 			quick-tap-ms = <200>;
 			bindings = <&kp>, <&kp>;
 			hold-trigger-on-release;
-			require-prior-idle-ms = <200>;
+			require-prior-idle-ms = <100>;
 		};
 		
 		rh_pht: right_positional_hold_tap {
@@ -67,7 +67,7 @@
 			quick-tap-ms = <200>;
 			bindings = <&kp>, <&kp>;
 			hold-trigger-on-release;
-			require-prior-idle-ms = <200>;
+			require-prior-idle-ms = <100>;
 		};
 	};
 	
