@@ -47,7 +47,7 @@
 			compatible = "zmk,behavior-tap-dance";
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
-			bindings = <&mo LOWER>, <&to LOWER>;
+			bindings = <&mo LAYER_LOWER>, <&to LAYER_LOWER>;
 		};
         
 		lh_pht: left_positional_hold_tap {
