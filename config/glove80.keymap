@@ -55,7 +55,6 @@
 			tapping-term-ms = <150>;// <---[[produces tap if held longer than tapping-term-ms]]
 			quick-tap-ms = <200>;
 			bindings = <&kp>, <&kp>;
-			hold-trigger-on-release;
 			require-prior-idle-ms = <100>;
 		};
 		
@@ -66,7 +65,6 @@
 			tapping-term-ms = <150>;// <---[[produces tap if held longer than tapping-term-ms]]
 			quick-tap-ms = <200>;
 			bindings = <&kp>, <&kp>;
-			hold-trigger-on-release;
 			require-prior-idle-ms = <100>;
 		};
 	};
