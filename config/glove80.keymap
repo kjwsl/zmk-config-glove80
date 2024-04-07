@@ -16,6 +16,7 @@
 #define LOWER   1
 #define MAGIC   2
 #define TEST    3
+#define GAMING  4
 
 // key positions
 #define LH_R1 0 1 2 3 4
@@ -46,7 +47,7 @@
 			tapping-term-ms = <200>;
 			bindings = <&mo LOWER>, <&to LOWER>;
 		};
-        
+		
 		lh_pht: left_positional_hold_tap {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
@@ -54,9 +55,9 @@
 			tapping-term-ms = <100>;// <---[[produces tap if held longer than tapping-term-ms]]
 			quick-tap-ms = <200>;
 			bindings = <&kp>, <&kp>;
-            hold-trigger-on-release;
+			hold-trigger-on-release;
 		};
-
+		
 		rh_pht: right_positional_hold_tap {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
@@ -64,7 +65,7 @@
 			tapping-term-ms = <100>;// <---[[produces tap if held longer than tapping-term-ms]]
 			quick-tap-ms = <200>;
 			bindings = <&kp>, <&kp>;
-            hold-trigger-on-release;
+			hold-trigger-on-release;
 		};
 	};
 	
@@ -160,6 +161,17 @@
 			&kp ESC &lh_pht LGUI A &lh_pht LALT S &lh_pht LCTRL D &lh_pht LSHIFT F &kp G &kp H &rh_pht LSHIFT J &rh_pht LCTRL K &rh_pht LALT L &rh_pht LGUI SEMI &kp SQT
 			&kp GRAVE      &kp Z    &kp X       &kp C       &kp V       &kp B   &kp LSHFT   &kp LCTRL   &layer_td  &kp LGUI  &kp RCTRL &kp RSHFT   &kp N   &kp M   &kp COMMA   &kp DOT     &kp FSLH    &kp PG_UP
 			&mo MAGIC      &kp HOME &kp END     &kp LEFT    &kp RIGHT           &kp BSPC    &kp DEL     &kp LALT   &kp RALT  &kp RET   &kp SPACE           &kp UP  &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
+			>;
+		};
+		
+		gaming_layer {
+			bindings = <
+			&kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10
+			&kp EQUAL &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp BSLH
+			&kp MINUS &kp GRAVE &kp B &kp N &kp M &kp DQT &kp B &kp N &kp M &kp COMMA &kp PERIOD &kp SLASH
+			&kp T &kp TAB &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P
+			&kp G &kp LSHFT &kp A &kp S &kp D &kp F &kp ESC &kp ENTER &kp PAUSE_BREAK &kp BSPC &kp DEL &kp ENTER &kp G &kp H &kp J &kp K &kp L &kp SEMI
+			&kp V &kp LCTRL &kp Z &kp X &kp C &kp SPACE &kp LALT &kp LGUI &kp RALT &kp TAB &kp SPACE &kp LPAR &kp LBKT &kp RBKT &kp RPAR &magic
 			>;
 		};
 	};
