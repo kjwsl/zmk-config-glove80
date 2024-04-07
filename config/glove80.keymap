@@ -12,10 +12,10 @@
 #include <dt-bindings/zmk/rgb.h>
 
 // layers
-#define LAYOUT_DEFAULT 0
-#define LAYOUT_LOWER   1
-#define LAYOUT_MAGIC   2
-#define LAYOUT_TEST    3
+#define DEFAULT 0
+#define LOWER   1
+#define MAGIC   2
+#define TEST    3
 
 // key positions
 #define LH_R1 0 1 2 3 4
