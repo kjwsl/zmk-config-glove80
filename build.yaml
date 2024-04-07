@@ -20,6 +20,3 @@
 include:
   - board: glove80_lh
   - board: glove80_rh
-include:
-  - board: glove80_lh
-  - board: glove80_rh
