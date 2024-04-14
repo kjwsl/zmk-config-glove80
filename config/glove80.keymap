@@ -19,17 +19,6 @@
 #define GAMING     4
 #define MAGIC      5
 
-/ {
-	macros {
-		rgb_ug_status_macro: rgb_ug_status_macro {
-			label = "RGB_UG_STATUS";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-			= <&rgb_ug RGB_STATUS>;
-		};
-	};
-};
 
 / {
 	behaviors {
@@ -128,7 +117,7 @@
 			&kp TAB &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &kp BSLH
 			&kp ESC &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &kp SEMI &kp SQT
 			&kp LSHFT &kp Z &kp X &kp C &kp V &kp B &kp LCTRL &kp LALT &kp HOME &kp PG_UP &kp LGUI &kp RCTRL &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-			&magic MAGIC 0 &kp GRAVE &kp CAPSLOCK &kp LEFT &kp RIGHT &kp BSPC &kp DEL &kp END &kp PG_DN &kp RET &kp SPACE &kp UP &kp DOWN &kp LBKT &kp RBKT &lower
+			&mo MAGIC &kp GRAVE &kp CAPSLOCK &kp LEFT &kp RIGHT &kp BSPC &kp DEL &kp END &kp PG_DN &kp RET &kp SPACE &kp UP &kp DOWN &kp LBKT &kp RBKT &lower
 			>;
 		};
 		
@@ -150,7 +139,7 @@
 			&kp TAB &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &kp BSLH
 			&kp ESC &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &kp SEMI &kp SQT
 			&kp GRAVE &kp Z &kp X &kp C &kp V &kp B &kp LSHFT &kp LCTRL &lower &kp LGUI &kp RCTRL &kp RSHFT &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp PG_UP
-			&magic MAGIC 0 &kp HOME &kp END &kp LEFT &kp RIGHT &kp BSPC &kp DEL &kp LALT &kp RALT &kp RET &kp SPACE &kp UP &kp DOWN &kp LBKT &kp RBKT &kp PG_DN
+			&mo MAGIC &kp HOME &kp END &kp LEFT &kp RIGHT &kp BSPC &kp DEL &kp LALT &kp RALT &kp RET &kp SPACE &kp UP &kp DOWN &kp LBKT &kp RBKT &kp PG_DN
 			>;
 		};
 		
